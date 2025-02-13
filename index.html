@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Bouquet for Pri</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bouquet {
+            position: absolute;
+            bottom: 100px;
+            animation: appear 3s ease-in-out;
+        }
+
+        @keyframes appear {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .note {
+            position: absolute;
+            bottom: 20px;
+            width: 220px;
+            height: 120px;
+            background: #fff5e1;
+            border: 3px solid #e6c300;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 20px;
+            color: #b30000;
+            font-size: 1.5em;
+            font-family: 'Cursive', sans-serif;
+            animation: noteAppear 4s ease-in-out 2s forwards;
+            opacity: 0;
+        }
+
+        @keyframes noteAppear {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .image {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .top-left { top: 20px; left: 20px; }
+        .top-right { top: 20px; right: 20px; }
+        .bottom-left { bottom: 20px; left: 20px; }
+        .bottom-right { bottom: 20px; right: 20px; }
+        .center { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; }
+
+        .flower-bouquet {
+            width: 900px;
+            height: 900px;
+            animation: bounce 1s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 200% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+	  <div class="bouquet">
+        <img src="bqt.jpg" class="flower-bouquet" alt="Beautiful Flower Bouquet">
+    </div>
+    <div class="image top-left">
+        <img src="imgtl.jpg" alt="Top Left Image">
+    </div>
+    <div class="image top-right">
+        <img src="imgtr.jpg" alt="Top Right Image">
+    </div>
+    <div class="image bottom-left">
+        <img src="imgbl.jpg" alt="Bottom Left Image">
+    </div>
+    <div class="image bottom-right">
+        <img src="imgbr.jpg" alt="Bottom Right Image">
+    </div>
+    <div class="image center">
+        <img src="imgc.jpg" alt="Center Image">
+    </div>
+    
+  
+    
+    <div class="note">
+        To my princess Pri ❤️<br>
+        From your Benny 💖
+    </div>
+</body>
+</html>
